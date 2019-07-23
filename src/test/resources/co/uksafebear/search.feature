@@ -9,11 +9,11 @@ Feature: Search
   * The user should be able to select a tool
 
 
-@search-tool
-Scenario: a user searches for a new tool
-Given I have logged in
-When I search for a new tool
-Then I see a list of all possible tools
+  @search-tool
+  Scenario: a user searches for a new tool
+    Given I have logged in
+    When I search for a new tool
+    Then I see a list of all possible tools
 
   @select-tool
   Scenario: user selects tool

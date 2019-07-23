@@ -9,4 +9,8 @@ public class Dog {
     public void setBreed(String newBreed) {
         breed = newBreed;
     }
+
+    public double getWeight(){
+        return weight;
+    }
 }

@@ -16,5 +16,13 @@ public class TestDog {
         fido.setBreed("pug");
         rex.setBreed("rottweiller");
         max.setBreed("golden retriever");
+
+        Dog.setAge(5);
+
+        System.out.println("Pippin's breed is " + pippin.getBreed());
+        System.out.println("Fido's breed is " + fido.getBreed());
+        System.out.println("Pippin is " + Dog.getAge() + " years old");
+
+        pippin.bark();
     }
 }

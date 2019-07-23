@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
     private static final String URL = System.getProperty("url", "http://toolslist.safebear.co.uk:8080");
@@ -29,6 +30,18 @@ public class Driver {
 
                 default:
                     throw new IllegalArgumentException("The browser type is undefined");
+
+            case "FIREFOX":
+                //Tell the user which browser we're our running tests on
+                System.out.println("Executing on FIREFOX");
+
+                //Use 'WebDriverManager' to set up our chromedriver
+                WebDriverManager.firefoxdriver().setup();
+
+                //Return our driver
+                return new FirefoxDriver();
+
+
         }
     }
 }

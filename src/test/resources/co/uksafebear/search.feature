@@ -9,13 +9,13 @@ Feature: Search
   * The user should be able to select a tool
 
 
-  @search-tool
+  @to-do
   Scenario: a user searches for a new tool
     Given I have logged in
     When I search for a new tool
     Then I see a list of all possible tools
 
-  @search-tool
+  @to-do
   Scenario: user selects tool
     Given I have searched for a tool
     When I select a tool

@@ -15,7 +15,7 @@ Feature: Search
     When I search for a new tool
     Then I see a list of all possible tools
 
-  @select-tool
+  @search-tool
   Scenario: user selects tool
     Given I have searched for a tool
     When I select a tool

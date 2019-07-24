@@ -10,7 +10,7 @@ public class LoginPageLocators {
 
     private By passwordLocator = By.id("password");
 
-    private By loginLocator = By.id("enter");
+    private By loginButtonLocator = By.id("enter");
 
     private By failedLoginMessage = By.xpath(".//p[@id=\"rejectLogin\"]/b");
 }

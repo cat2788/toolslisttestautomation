@@ -8,5 +8,11 @@ public class ToolsPageLocators {
 
     private By successfulLoginMessage = By.xpath(".//div[@class='container']/p/b)");
 
+    // Locator for my Search field
+
+    // Locator for the Search button
+
+    // Locator for the tool title
+
 
 }

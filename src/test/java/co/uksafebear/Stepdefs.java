@@ -1,5 +1,7 @@
 package co.uksafebear;
 
+import co.uksafebear.pages.LoginPage;
+import co.uksafebear.pages.ToolsPage;
 import co.uksafebear.utils.Driver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -14,12 +16,20 @@ public class Stepdefs {
 
     WebDriver driver;
 
+    LoginPage loginPage;
+    ToolsPage toolsPage;
+
     @Before
     public void setUp(){
         //get the driver for the browser
         driver = Driver.getDriver();
+
+        loginPage = new LoginPage(driver);
+        toolsPage = new ToolsPage(driver);
+
         //navigate to the url of our webpage
         driver.get(Driver.getUrl());
+
     }
 
     @After

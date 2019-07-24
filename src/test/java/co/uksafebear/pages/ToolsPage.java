@@ -16,4 +16,8 @@ public class ToolsPage {
     public String getPageTitle() {
         return driver.getTitle();
     }
+
+    public String checkForLoginSuccessfulMessage(){
+        return driver.findElement(locators.getSuccessfulLoginMessage()).getText();
+    }
 }

@@ -15,7 +15,7 @@ Feature: Search
     When I search for a new tool
     Then I see a list of all possible tools
 
-    @search @to-do
+  @search @to-do
   Scenario: user selects tool
     Given I have searched for a tool
     When I select a tool

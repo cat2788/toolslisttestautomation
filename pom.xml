@@ -80,9 +80,9 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
 
-        <plugin>
+
+            <plugin>
             <groupId>com.trivago.rta</groupId>
             <artifactId>cluecumber-report-plugin</artifactId>
             <version>1.8.0</version>
@@ -99,6 +99,9 @@
                 <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
                 <generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
             </configuration>
-        </plugin>
+            </plugin>
+        </plugins>
+
     </build>
+
 </project>

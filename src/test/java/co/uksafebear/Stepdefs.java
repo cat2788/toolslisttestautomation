@@ -1,5 +1,7 @@
 package co.uksafebear;
 
+import co.uksafebear.pages.LoginPage;
+import co.uksafebear.pages.ToolsPage;
 import co.uksafebear.utils.Driver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -14,12 +16,20 @@ public class Stepdefs {
 
     WebDriver driver;
 
+    LoginPage loginPage;
+    ToolsPage toolsPage;
+
     @Before
     public void setUp(){
         //get the driver for the browser
         driver = Driver.getDriver();
+
+        loginPage = new LoginPage(driver);
+        toolsPage = new ToolsPage(driver);
+
         //navigate to the url of our webpage
         driver.get(Driver.getUrl());
+
     }
 
     @After
@@ -55,14 +65,14 @@ public class Stepdefs {
         throw new cucumber.api.PendingException();
     }
 
-    @When("I search for a new tool")
-    public void i_search_for_a_new_tool() {
+    @When("I search for a new tool {string}")
+    public void i_search_for_a_new_tool(String toolName) {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
 
-    @Then("I see a list of all possible tools")
-    public void i_see_a_list_of_all_possible_tools() {
+    @Then("I see a list of correct tools")
+    public void i_see_a_list_of_correct_tools() {
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }

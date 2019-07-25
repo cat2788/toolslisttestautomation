@@ -1,0 +1,4 @@
+# Igore ItelliJ fi;les
+
+.idea
+*.iml

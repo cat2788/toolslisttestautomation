@@ -23,7 +23,10 @@ Feature: Login
       | tester2  | letmein  |
 
   @to-do
-  Scenario: an invalid user attempts to log in
+  Scenario Outline: an invalid user attempts to log in
     Given I am logged out
-    When I enter username "attacker" and password "dontletmein"
+    When I enter username "<username>" and password "<password>"
     Then the user is informed that the login is unsuccessful
+    Examples:
+      | username | password    |
+      | attacker | dontletmein |

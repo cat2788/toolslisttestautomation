@@ -1,0 +1,4 @@
+# Ignore ItelliJ files
+
+.idea
+*.iml

@@ -23,7 +23,6 @@ public class Stepdefs {
     public void setUp(){
         //get the driver for the browser
         driver = Driver.getDriver();
-
         loginPage = new LoginPage(driver);
         toolsPage = new ToolsPage(driver);
 
@@ -44,14 +43,15 @@ public class Stepdefs {
 
     @Given("I am logged out")
     public void i_am_logged_out() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        //assert that we're on the 'login page'
+        assertEquals("We're not on the login page","Login Page", loginPage.getPageTitle());
     }
 
     @When("I enter username {string} and password {string}")
     public void i_enter_username_and_password(String username, String password) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
+        loginPage.clickLoginButton();
     }
 
     @Then("the user is informed that the login is successful")

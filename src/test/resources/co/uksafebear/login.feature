@@ -22,7 +22,7 @@ Feature: Login
       | tester1  | letmein  |
       | tester2  | letmein  |
 
-  @to-do
+  @unsuccessful_login @to-do
   Scenario Outline: an invalid user attempts to log in
     Given I am logged out
     When I enter username "<username>" and password "<password>"

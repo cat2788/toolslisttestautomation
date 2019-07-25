@@ -9,8 +9,9 @@ Feature: Search
   * The user should be able to select a tool
 
 
-  @search @to-do
-  Scenario: a user searches for a new tool
+  @search
+  @to-do
+  Scenario Outline: a user searches for a new tool
     Given I have logged in
     When I search for a new tool "<toolName>"
     Then I see a list of correct tools

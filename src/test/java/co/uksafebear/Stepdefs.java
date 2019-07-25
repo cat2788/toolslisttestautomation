@@ -10,6 +10,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
 
 public class Stepdefs {
@@ -56,8 +57,7 @@ public class Stepdefs {
 
     @Then("the user is informed that the login is successful")
     public void the_user_is_informed_that_the_login_is_successful() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        assertThat("Login failed or the login successful message did not appear",toolsPage.checkForLoginSuccessfulMessage(), containsString("Login Successful"));
     }
     @Given("I have logged in")
     public void i_have_logged_in() {
